@@ -1,0 +1,53 @@
+html {
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcbf49;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-image: url('../images/sky.png');
+    color: #ade8f4;
+    padding: 16px;
+}
+
+h1 {
+    font-family: star, Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    margin: 0;
+    padding: 32px;
+    justify-content: space-evenly;
+}
+
+#planet,
+#starship,
+#vehicle {
+    font-size: 18px;
+    padding: 12px;
+}
+
+.planets > div,
+.starships > div,
+.vehicles > div {
+    padding-top: 12px;
+}
+
+@media screen and (max-width: 760px) {
+    main {
+        display: block;
+    
+    }
+    
+
+}
