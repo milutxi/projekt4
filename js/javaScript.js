@@ -1,7 +1,8 @@
 $(function(){
-
+    // Since the h1 never changes it should be done in html. JS is for things that change!
     $("header").append($("<h1>").text("STAR WARS"));
     
+    // Three! Wow!
     const PLANET_API = "https://swapi.py4e.com/api/planets";
     const STARSHIP_API = "https://swapi.py4e.com/api/starships";
     const VEHICLE_API = "https://swapi.py4e.com/api/vehicles";
@@ -15,8 +16,10 @@ $(function(){
     function getSomePlanet() {
         fetch(PLANET_API)
         .then((response) => {
+            // Have a space before and after the (  ) in ifs. eg if (!response.ok) {
             if(!response.ok) {
                 throw new Error(response.status)
+            // } else {
             }else{
                 return response.json()
             }
@@ -36,7 +39,6 @@ $(function(){
             $("#planet").on("change", function() {
                           
                 planets.forEach(item => {
-
                     if(item.name === this.value ) {  // in each planet I get its info
                         $(".planets-diameter").text("Diameter: " + item.diameter);
                         $(".planets-terrain").text("Terrain: " + item.terrain);
@@ -48,16 +50,16 @@ $(function(){
                         $(".planets-terrain").text( "");
                         $(".planets-climate").text( "");
                         $(".planets-population").text("");  
-
+// It's more readable if you remove these empty lines 
                     }
-                                  
+        // Detsamma!                         
                 });
                
             })
                        
          })
 
-        .catch(error => {
+        .catch(error => { // Nice!
             $(".planets").append($("<div class='wrapper-planets'>").text("Something went wrong " + error));
         })
     }
@@ -113,7 +115,7 @@ $(function(){
     }
 
 
-
+// What happened here!
     
     
     
